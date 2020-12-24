@@ -19,3 +19,4 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/deploym
 # More links
 - [Tutorial of World Ranks](https://dev.to/nghiemthu/full-project-based-tutorial-react-next-js-free-434l)
 - [Add Ant.d to Next.js](https://dev.to/burhanuday/using-ant-design-with-nextjs-custom-variables-for-ant-design-57m5)
+- [Configure AirBnB ESLint](https://medium.com/@khriztianmoreno/configuraci%C3%B3n-de-eslint-usando-la-gu%C3%ADa-de-estilo-react-jsx-de-airbnb-c07ce3dcb072)
