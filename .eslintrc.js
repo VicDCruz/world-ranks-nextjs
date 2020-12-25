@@ -27,6 +27,6 @@ module.exports = {
     'no-case-declarations': 0,
     'import/prefer-default-export': 0,
     'react/jsx-filename-extension': 0,
-    'arrow-parens': 0,
+    'arrow-parens': [2, 'as-needed'],
   },
 };

@@ -3,7 +3,7 @@ import { CodeTwoTone } from '@ant-design/icons';
 import { Button, message } from 'antd';
 
 function Header() {
-  const handleClick = (menu) => () => {
+  const handleClick = menu => () => {
     const msg = `You clicked ${menu}. A random message, enjoy!`;
     switch (Math.ceil(Math.random() * 4)) {
       case 1:
