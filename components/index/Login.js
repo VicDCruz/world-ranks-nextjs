@@ -1,9 +1,13 @@
-import { Form, Input, Button, Checkbox } from 'antd';
+import React from 'react';
+import {
+  Form, Input, Button, Checkbox,
+} from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 function Login() {
   const onFinish = values => {
     console.log('Received values of form: ', values);
+    if (values) console.log('hola');
   };
 
   return (
@@ -38,9 +42,9 @@ function Login() {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <a href="">
+            <Button type="link">
               Forgot password
-          </a>
+            </Button>
           </div>
         </div>
       </Form.Item>
@@ -49,10 +53,12 @@ function Login() {
         <Button type="primary" htmlType="submit" className="py-3 px-12 mr-5 rounded-md focus:outline-none w-full">
           Log in
         </Button>
-        Or <a href="">register now!</a>
+        Or
+        {' '}
+        <Button type="link">register now!</Button>
       </Form.Item>
     </Form>
-  )
+  );
 }
 
-export default Login
+export default Login;

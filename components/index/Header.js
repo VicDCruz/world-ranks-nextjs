@@ -1,8 +1,9 @@
+import React from 'react';
 import { CodeTwoTone } from '@ant-design/icons';
-import { Button, message } from "antd";
+import { Button, message } from 'antd';
 
 function Header() {
-  const handleClick = menu => () => {
+  const handleClick = (menu) => () => {
     const msg = `You clicked ${menu}. A random message, enjoy!`;
     switch (Math.ceil(Math.random() * 4)) {
       case 1:
@@ -55,7 +56,9 @@ function Header() {
           </div>
           <div className="block lg:hidden">
             <button
-              className="flex items-center px-4 py-3 border rounded text-yellow-500 border-yellow-500 focus:outline-none">
+              type="button"
+              className="flex items-center px-4 py-3 border rounded text-yellow-500 border-yellow-500 focus:outline-none"
+            >
               <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <title>Menu</title>
                 <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -65,7 +68,7 @@ function Header() {
         </div>
       </nav>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
