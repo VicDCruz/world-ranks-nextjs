@@ -1,12 +1,13 @@
+import React from 'react';
 import { ConfigProvider } from 'antd';
 import App from 'next/app';
-import Layout from '../components/Layout';
 import esES from 'antd/lib/locale/es_ES';
+import Layout from '../components/Layout';
 import '../styles/antd.less';
 
 class MyApp extends App {
   render() {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps } = this.props;
 
     return (
       <ConfigProvider locale={esES}>
@@ -18,4 +19,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp
+export default MyApp;
