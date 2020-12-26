@@ -28,5 +28,6 @@ module.exports = {
     'import/prefer-default-export': 0,
     'react/jsx-filename-extension': 0,
     'arrow-parens': [2, 'as-needed'],
+    'react/jsx-props-no-spreading': 0,
   },
 };
