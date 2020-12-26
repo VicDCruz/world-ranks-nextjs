@@ -1,13 +1,25 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 import {
-  Form, Input, Button, Checkbox,
+  Form, Input, Button, Checkbox, message,
 } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 function Login() {
-  const onFinish = values => {
-    console.log('Received values of form: ', values);
-    if (values) console.log('hola');
+  const router = useRouter();
+
+  const onFinish = async values => {
+    // console.log('Received values of form: ', values);
+    const url = '/api/login';
+    const res = await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (res.ok) router.push('/ranks');
+    else message.error('Usuario o contraseña incorrectos');
   };
 
   return (
