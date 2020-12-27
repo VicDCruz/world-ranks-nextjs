@@ -36,3 +36,4 @@ module.exports = withCSS(withLess({
 - [Configure AirBnB ESLint](https://medium.com/@khriztianmoreno/configuraci%C3%B3n-de-eslint-usando-la-gu%C3%ADa-de-estilo-react-jsx-de-airbnb-c07ce3dcb072)
 - [Install Tailwind in Next.js](https://tailwindcss.com/docs/guides/nextjs)
 - [Join Css & Less in Next.js](https://stackoverflow.com/a/59562482)
+- [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier#options)
