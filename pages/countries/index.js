@@ -1,6 +1,6 @@
+import React from 'react';
 import { PageHeader, Input, Statistic, Table } from 'antd';
 import { useRouter } from 'next/router';
-import React from 'react';
 
 const { Search } = Input;
 

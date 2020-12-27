@@ -16,7 +16,7 @@ function Login() {
         'Content-Type': 'application/json',
       },
     });
-    if (res.ok) router.push('/ranks');
+    if (res.ok) router.push('/countries');
     else message.error('Usuario o contraseña incorrectos');
   };
 
