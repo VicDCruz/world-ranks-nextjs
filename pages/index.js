@@ -1,5 +1,6 @@
-import Login from "../components/index/Login";
-import Header from "../components/index/Header";
+import React from 'react';
+import Login from '../components/index/Login';
+import Header from '../components/index/Header';
 
 export default function Home() {
   return (
@@ -23,5 +24,5 @@ export default function Home() {
       </div>
 
     </div>
-  )
+  );
 }

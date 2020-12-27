@@ -6,6 +6,9 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:prettier/recommended',
+    'prettier/flowtype',
+    'prettier/react',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -14,9 +17,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react', 'prettier'],
   rules: {
     'no-underscore-dangle': 0,
     'arrow-body-style': 1,
@@ -27,7 +28,11 @@ module.exports = {
     'no-case-declarations': 0,
     'import/prefer-default-export': 0,
     'react/jsx-filename-extension': 0,
-    'arrow-parens': [2, 'as-needed'],
     'react/jsx-props-no-spreading': 0,
+    'react/forbid-prop-types': 0,
+    'prettier/prettier': [
+      'error',
+      { singleQuote: true, parser: 'flow', arrowParens: 'avoid' },
+    ],
   },
 };
