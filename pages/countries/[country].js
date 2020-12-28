@@ -10,9 +10,8 @@ const getCountry = async id => {
   return country;
 };
 
-function Country({ country }) {
+function Country({ country, borders }) {
   const router = useRouter();
-  const [borders, setBorders] = React.useState([]);
   const data = [
     { title: 'Capital', value: country.capital },
     {
@@ -27,18 +26,7 @@ function Country({ country }) {
     { title: 'Gini', value: country.gini },
   ];
 
-  const getBorders = async () => {
-    const borders = await Promise.all(
-      country.borders.map(border => getCountry(border))
-    );
-    setBorders(borders);
-  };
-
   const back = () => router.back();
-
-  React.useEffect(() => {
-    getBorders();
-  }, []);
 
   return (
     <div>
@@ -108,10 +96,12 @@ function Country({ country }) {
 
 Country.propTypes = {
   country: PropTypes.object,
+  borders: PropTypes.array,
 };
 
 Country.defaultProps = {
   country: {},
+  borders: [],
 };
 
 export const getServerSideProps = async ({ params }) => {
@@ -119,9 +109,11 @@ export const getServerSideProps = async ({ params }) => {
     `https://restcountries.eu/rest/v2/alpha/${params.country}`
   );
   const country = await res.json();
-
   if (country.status >= 400) return { notFound: true };
-  return { props: { country } };
+  const borders = await Promise.all(
+    country.borders.map(border => getCountry(border))
+  );
+  return { props: { country, borders } };
 };
 
 export default Country;
