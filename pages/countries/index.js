@@ -1,6 +1,8 @@
 import React from 'react';
-import { PageHeader, Input, Statistic, Table } from 'antd';
+import { PageHeader, Input, Statistic, Table, Button } from 'antd';
+import { InfoOutlined } from '@ant-design/icons';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const { Search } = Input;
 
@@ -63,6 +65,16 @@ function index({ countries }) {
       key: 'gini',
       render: element => (element ? `${element}%` : 'Sin gini'),
       className: 'font-mono',
+    },
+    {
+      title: 'Detalles',
+      dataIndex: 'alpha3Code',
+      key: 'alpha3Code',
+      render: code => (
+        <Link href={`/countries/${code}`}>
+          <Button type="primary" shape="circle" icon={<InfoOutlined />} />
+        </Link>
+      ),
     },
   ];
 
