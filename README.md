@@ -19,7 +19,7 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Web config file
 `next.config.js`
 
-```
+```javascript
 const withCSS = require('@zeit/next-css')
 const withLess = require('@zeit/next-less')
 module.exports = withCSS(withLess({
@@ -29,6 +29,19 @@ module.exports = withCSS(withLess({
     },
 }))
 ```
+
+# How to use
+## Log in
+![Login Front](pictures/login-front.png)
+**Username:** a@a.com
+
+**Password:** pwd
+
+## Use countries' info.
+![Table of countries](pictures/table.png)
+
+## See specific info. of one country
+![Country's info](pictures/country.png)
 
 # More links
 - [Tutorial of World Ranks](https://dev.to/nghiemthu/full-project-based-tutorial-react-next-js-free-434l)
