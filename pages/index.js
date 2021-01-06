@@ -17,9 +17,8 @@ export default function Home() {
                 World ranks!
               </h1>
               <p className="text-md lg:text-xl font-light text-gray-800 mb-8">
-                Powerful analytics tools for your business. See the exact
-                keywords for which your competitors rank in organic search and
-                the amount of traffic driven by each of them.
+                Para iniciar sesión, el usuario es 'a@a.com' y la contraseña es 'pwd'.
+                Automáticamente será redirigido al sistema.
               </p>
             </div>
             <div className="w-full lg:w-1/2 lg:pl-24">
